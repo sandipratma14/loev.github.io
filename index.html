@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love youu WULANNN</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffc5c5; /* Background warna pink */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        h1 {
+            color: #ff69b4; /* Warna pink tua */
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            position: relative;
+            width: 300px; /* Ukuran tetap untuk galeri */
+            height: 200px; /* Ukuran tetap untuk galeri */
+            overflow: hidden; /* Menghindari gambar keluar dari kontainer */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Memastikan gambar mengisi kontainer */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .gallery img.active {
+            opacity: 1; /* Menampilkan gambar aktif */
+        }
+        audio {
+            margin-top: 20px;
+            border: none;
+            outline: none;
+        }
+        .audio-container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .romantic-text {
+            font-size: 20px;
+            font-style: italic;
+            color: #ff69b4;
+            margin-bottom: 10px;
+            text-align: center; /* Memusatkan teks */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LOVE YOUUU WULANNN</h1>
+
+    <div class="romantic-text">
+        "You are the love of my life"
+        "Forever and always, my heart belongs to you"
+        "In your eyes, I see my future"
+        "You make my heart skip a beat"
+        "I love you more with each passing day"
+    </div>
+
+    <div class="gallery">
+        <img src="mylove1.jpg" alt="Gambar 1" class="active">
+        <img src="mylove2.jpg" alt="Gambar 2">
+        <img src="mylove3.jpg" alt="Gambar 3">
+        <img src="mylove4.jpg" alt="Gambar 4">
+    </div>
+
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="mylove.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+
+    <div class="romantic-text">
+        "You are my everything"
+        "I promise to love you forever"
+        "You are my soulmate"
+        "I love you more than words can say"
+        "You are my heart, my everything"
+    </div>
+
+    <script>
+        // Slideshow untuk gambar
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Ganti gambar setiap 3 detik
+    </script>
+
+</body>
+</html>
